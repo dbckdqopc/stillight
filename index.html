@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>스틸라이트 목회 작업실</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* 레이아웃: 단일 컬럼 한 장 소개. 흰 바탕과 짙은 회색 글자, 파란 강조색 하나. 먹색 바탕은 다크 모드. */
+:root {
+  --bg: #FFFFFF;
+  --surface: #F7F6F3;
+  --line: #E9E8E4;
+  --fg: #37352F;
+  --muted: #787774;
+  --accent: #2383E2;
+  --on-accent: #FFFFFF;
+  --font: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #191919;
+    --surface: #202020;
+    --line: #2F2F2F;
+    --fg: #F1F1EF;
+    --muted: #9B9A97;
+    --accent: #529CCA;
+    --on-accent: #191919;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #191919;
+  --surface: #202020;
+  --line: #2F2F2F;
+  --fg: #F1F1EF;
+  --muted: #9B9A97;
+  --accent: #529CCA;
+  --on-accent: #191919;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.75;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+}
+.wrap { max-width: 640px; margin: 0 auto; }
+.top {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding-block: 28px; font-size: 14px; color: var(--muted);
+}
+.hero { padding-block: 56px 48px; }
+.label {
+  display: inline-block; padding: 4px 12px; border-radius: 6px;
+  background: var(--surface); color: var(--accent);
+  font-size: 14px; font-weight: 500; margin-bottom: 20px;
+}
+h1 {
+  margin: 0 0 20px; font-size: clamp(38px, 10vw, 56px); line-height: 1.3;
+  letter-spacing: -0.04em; font-weight: 700; text-wrap: balance;
+}
+.slogan { margin: 0; font-size: 22px; font-weight: 500; color: var(--accent); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; list-style: none; }
+.chips li {
+  padding: 4px 14px; border: 1px solid var(--line); border-radius: 999px;
+  font-size: 14px; color: var(--muted);
+}
+section { padding-block: 40px; border-top: 1px solid var(--line); }
+h2 { margin: 0 0 16px; font-size: 14px; font-weight: 500; letter-spacing: 0.06em; color: var(--muted); }
+.lead { margin: 0 0 20px; font-size: 24px; line-height: 1.5; font-weight: 700; letter-spacing: -0.03em; text-wrap: balance; }
+p { margin: 0 0 16px; }
+.list { display: grid; gap: 12px; margin: 24px 0 0; padding: 0; list-style: none; }
+.list li { padding: 18px 20px; background: var(--surface); border-radius: 8px; }
+.list b { display: block; font-size: 18px; margin-bottom: 2px; }
+.list span { color: var(--muted); font-size: 15px; }
+.contact { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.btn {
+  display: inline-block; padding: 14px 24px; border-radius: 8px;
+  background: var(--accent); color: var(--on-accent);
+  font: inherit; font-size: 16px; font-weight: 700; text-decoration: none;
+}
+.btn:hover { opacity: 0.9; }
+.btn:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.btn.ghost { background: transparent; color: var(--fg); border: 1px solid var(--line); }
+.note { margin-top: 20px; font-size: 14px; color: var(--muted); }
+.note a { color: var(--accent); }
+footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span>@stilllight_ethics</span><span>목회 도구 · 묵상</span></div>
+
+  <header class="hero">
+    <span class="label">소개</span>
+    <h1>스틸라이트<br>목회 작업실</h1>
+    <p class="slogan">목회자를 위한 목회자</p>
+    <ul class="chips" aria-label="키워드">
+      <li>시간</li><li>도구</li><li>템플릿</li><li>목회</li><li>성도</li>
+    </ul>
+  </header>
+
+  <section>
+    <h2>하는 일과 이유</h2>
+    <p class="lead">행정은 도구에게,<br>목회자는 성도에게</p>
+    <p>목회자가 행정과 기술에 시간을 뺏기지 않고 성도를 만날 시간을 더 확보하도록, 바로 쓸 수 있는 템플릿을 만듭니다.</p>
+    <p>목회자에 대한 신뢰가 무너진 시대에, 한 사람의 목회자가 건강하게 사역하는 일이 교회를 다시 세운다고 믿습니다. 그래서 제가 할 수 있는 작은 일부터 시작했습니다.</p>
+    <ul class="list">
+      <li><b>사역 도구와 템플릿</b><span>서식과 기록처럼 반복되는 일을 줄여 드립니다.</span></li>
+      <li><b>기독교윤리적 말씀 묵상</b><span>하루를 윤리의 눈으로 천천히 돌아봅니다.</span></li>
+      <li><b>신학자의 처방전</b><span>목회자의 고민에 신학자의 관점으로 답합니다.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>돕고 싶은 사람</h2>
+    <p class="lead">성도를 만날 시간이 부족한 목회자</p>
+    <p>행정과 기술 업무에 시간을 빼앗겨 심방과 말씀과 기도에 마음을 쏟기 어려운 목회자와 사역자를 돕고 싶습니다.</p>
+  </section>
+
+  <section>
+    <h2>연락</h2>
+    <p class="lead">함께 이야기해 주세요</p>
+    <p>도구에 대한 의견이나 필요한 템플릿이 있으면 편하게 알려 주세요.</p>
+    <div class="contact">
+      <a class="btn" href="https://www.instagram.com/stilllight_ethics/" target="_blank" rel="noopener">인스타그램으로 연락하기</a>
+    </div>
+    <p class="note">이메일: dbckdqopc@gmail.com<br>무료 목사고시 퀴즈: <a href="https://frosted-vase-c5f.notion.site/4104429624d981ab9755ed8dc83ec8ea?source=copy_link" target="_blank" rel="noopener">안내 페이지 열기</a></p>
+    <p class="note"><a href="./quiz/">퀴즈 앱 바로 열기</a></p>
+  </section>
+
+  <footer>스틸라이트 목회 작업실</footer>
+</div>
+</body>
+</html>
