@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>자료실 · 스틸라이트 목회 작업실</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* 레이아웃: 단일 컬럼 한 장 소개. 흰 바탕과 짙은 회색 글자, 파란 강조색 하나. 먹색 바탕은 다크 모드. */
+:root {
+  --bg: #FFFFFF;
+  --surface: #F7F6F3;
+  --line: #E9E8E4;
+  --fg: #37352F;
+  --muted: #787774;
+  --accent: #2383E2;
+  --on-accent: #FFFFFF;
+  --font: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #191919;
+    --surface: #202020;
+    --line: #2F2F2F;
+    --fg: #F1F1EF;
+    --muted: #9B9A97;
+    --accent: #529CCA;
+    --on-accent: #191919;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #191919;
+  --surface: #202020;
+  --line: #2F2F2F;
+  --fg: #F1F1EF;
+  --muted: #9B9A97;
+  --accent: #529CCA;
+  --on-accent: #191919;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.75;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+}
+.wrap { max-width: 640px; margin: 0 auto; }
+.top {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding-block: 28px; font-size: 14px; color: var(--muted);
+}
+.hero { padding-block: 56px 48px; }
+.label {
+  display: inline-block; padding: 4px 12px; border-radius: 6px;
+  background: var(--surface); color: var(--accent);
+  font-size: 14px; font-weight: 500; margin-bottom: 20px;
+}
+h1 {
+  margin: 0 0 20px; font-size: clamp(38px, 10vw, 56px); line-height: 1.3;
+  letter-spacing: -0.04em; font-weight: 700; text-wrap: balance;
+}
+.slogan { margin: 0; font-size: 22px; font-weight: 500; color: var(--accent); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; list-style: none; }
+.chips li {
+  padding: 4px 14px; border: 1px solid var(--line); border-radius: 999px;
+  font-size: 14px; color: var(--muted);
+}
+section { padding-block: 40px; border-top: 1px solid var(--line); }
+h2 { margin: 0 0 16px; font-size: 14px; font-weight: 500; letter-spacing: 0.06em; color: var(--muted); }
+.lead { margin: 0 0 20px; font-size: 24px; line-height: 1.5; font-weight: 700; letter-spacing: -0.03em; text-wrap: balance; }
+p { margin: 0 0 16px; }
+.list { display: grid; gap: 12px; margin: 24px 0 0; padding: 0; list-style: none; }
+.list li { padding: 18px 20px; background: var(--surface); border-radius: 8px; }
+.list b { display: block; font-size: 18px; margin-bottom: 2px; }
+.list span { color: var(--muted); font-size: 15px; }
+.contact { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.btn {
+  display: inline-block; padding: 14px 24px; border-radius: 8px;
+  background: var(--accent); color: var(--on-accent);
+  font: inherit; font-size: 16px; font-weight: 700; text-decoration: none;
+}
+.btn:hover { opacity: 0.9; }
+.btn:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.btn.ghost { background: transparent; color: var(--fg); border: 1px solid var(--line); }
+.note { margin-top: 20px; font-size: 14px; color: var(--muted); }
+.note a { color: var(--accent); }
+.dl { display: grid; gap: 12px; margin: 24px 0 0; padding: 0; list-style: none; }
+.dl li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 20px; background: var(--surface); border-radius: 8px; }
+.dl b { display: block; font-size: 18px; }
+.dl span { color: var(--muted); font-size: 15px; }
+.btn.sm { padding: 10px 18px; font-size: 15px; }
+footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+.top a { color: var(--muted); text-decoration: none; }
+.top a:hover { color: var(--accent); }
+.item-desc { display: block; margin-top: 4px; color: var(--muted); font-size: 15px; line-height: 1.6; }
+.dl li > div { flex: 1 1 260px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../">← 스틸라이트 목회 작업실</a><span>자료실</span></div>
+
+  <header class="hero">
+    <span class="label">자료실</span>
+    <h1>바로 쓰는<br>사역 자료</h1>
+    <p class="slogan">행정은 도구에게, 목회자는 성도에게</p>
+  </header>
+
+  <section id="study">
+    <h2>목회자 학습</h2>
+    <p class="lead">목사고시 대비 퀴즈</p>
+    <ul class="dl">
+      <li><div><b>목사고시 퀴즈 앱</b><span class="item-desc">브라우저에서 바로 풀 수 있는 무료 퀴즈입니다. 설치나 가입 없이 휴대폰에서도 열립니다.</span></div><a class="btn sm" href="../quiz/">퀴즈 열기</a></li>
+    </ul>
+    <p class="note">문항은 계속 다듬고 있습니다. 시험 준비는 반드시 최신 헌법과 교재로 확인해 주세요.</p>
+  </section>
+
+  <section id="advent">
+    <h2>교회학교 · 가정</h2>
+    <p class="lead">2026 대림절 묵상 자료</p>
+    <p>교회학교 어린이와 가정이 12월 1일부터 24일까지 하루 한 쪽씩 말씀을 따라가는 묵상 자료입니다. 내려받아 인쇄해 쓰시고, 교회 이름과 부서 이름은 빈칸에 직접 적어 주세요.</p>
+    <ul class="dl">
+      <li><div><b>묵상 달력</b><span class="item-desc">A4 가로 · 1쪽 · PDF 0.6MB</span></div><a class="btn sm" href="../downloads/advent-2026-calendar-a4.pdf" download>내려받기</a></li>
+      <li><div><b>묵상 소책자</b><span class="item-desc">A5 · 28쪽 · PDF 7.9MB</span></div><a class="btn sm" href="../downloads/advent-2026-booklet-a5.pdf" download>내려받기</a></li>
+    </ul>
+    <p class="note">본문은 개역개정 성경을 기준으로 합니다.</p>
+  </section>
+
+  <section>
+    <h2>소식</h2>
+    <p>새 자료는 인스타그램에서 먼저 안내합니다.</p>
+    <div class="contact"><a class="btn ghost" href="https://www.instagram.com/stilllight_ethics/" target="_blank" rel="noopener">인스타그램 보기</a></div>
+  </section>
+
+  <footer>스틸라이트 목회 작업실</footer>
+</div>
+</body>
+</html>
